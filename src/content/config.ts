@@ -10,15 +10,4 @@ const blog = defineCollection({
   }),
 });
 
-const experience = defineCollection({
-  type: 'content',
-  schema: z.object({
-    company: z.string(),
-    position: z.string(),
-    description: z.string(),
-    start: z.coerce.date(),
-    end: z.coerce.date().optional(),
-  }),
-});
-
-export const collections = { blog, experience };
+export const collections = { blog };
