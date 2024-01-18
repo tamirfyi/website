@@ -1,29 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
-import Navbar from '../components/Navbar.astro';
+import BlogPostPreview from '../components/previews/BlogPostPreview.astro';
+import WorkExperiencePreview from '../components/previews/WorkExperiencePreview.astro';
 
 const posts = (await getCollection('blog')).sort((a: any, b: any) => a.data.published.valueOf() - b.data.published.valueOf());
+const experiences = (await getCollection('experience')).sort((a: any, b: any) => a.data.end.valueOf() - b.data.end.valueOf());
 ---
 
-<!-- https://cv.jarocki.me/ -->
-
 <Layout>
-  <Navbar/>
+  <nav class="flex justify-between py-6">
+    <a href="/" class="font-bold text-3xl">Hi, I'm Tamir</a>
+  </nav>
   <main class="flex flex-col gap-y-8">
     <div class="flex flex-col gap-2">
-      <h1 class="text-lg font-semibold">Work Experience</h1>
-      <ul>
-        <li>
-          <div class="flex justify-between">
-            <p class="font-semibold">HigherGround</p>
-            <p class="text-gray-500">July 2023 → Now</p>
-          </div>
-          <p class="">Software Engineer</p>
-          <p class="text-gray-500 text-sm">Maintain and implement new features for Android application that powers the SatPaq: the world's most compact, easy-to-use, and secure satellite communicator.</p>
-        </li>
-      </ul>
+      <h1 class="text-lg font-semibold">Today</h1>
+      <p>{`I am a Software Engineer at`} <span class="underline hover:text-blue-600 transition ease hover:cursor-pointer"><a href="https://www.higherground.earth" target="_blank">{`HigherGround LLC`}</a></span>{`. I work on a small team that maintains and develops new software for the world's most compact, easy-to-use, and secure satellite communicator.`}</p>
     </div>
     <div class="flex flex-col gap-2">
       <h1 class="text-lg font-semibold">Blog</h1>

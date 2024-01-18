@@ -1,0 +1,13 @@
+---
+const {company, position, description, start, end} = Astro.props
+---
+
+<li>
+  <div class="flex justify-between">
+    <p class="font-semibold">{`${company}`}</p>
+    <p class="text-gray-500">{end ? `${start} → ${end}` : `Current`}</p>
+  </div>
+  <p class="">{`${position}`}</p>
+  <p class="text-gray-500 text-sm">{`${description}`}</p>
+  <!-- <p class="text-gray-500 text-sm">Maintain and implement new features for Android application that powers the SatPaq: the world's most compact, easy-to-use, and secure satellite communicator.</p> -->
+</li>
