@@ -4,6 +4,6 @@ const {title, published, slug} = Astro.props
 ---
 
 <div class="flex justify-between">
-  <a href={`/blog/${slug}`} class="hover:underline transition ease">{title}</a>
+  <a href={`/blog/${slug}`} class="hover:underline hover:text-blue-600">{title}</a>
   <FormattedDate date={published}/>
 </div>
