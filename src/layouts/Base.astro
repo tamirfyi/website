@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/Navbar.astro';
 const {title, description} = Astro.props;
 ---
 
@@ -9,6 +10,9 @@ const {title, description} = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
   <body class="mx-auto max-w-screen-sm flex flex-col gap-y-4">
-    <slot/>
+    <Navbar/>
+    <main class="flex flex-col gap-y-8">
+      <slot/>
+    </main>
   </body>
 </html>

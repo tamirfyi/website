@@ -1,0 +1,24 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Navbar from '../components/Navbar.astro';
+const {title, description} = Astro.props;
+const {post} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head class="">
+		<BaseHead title={title} description={description} />
+	</head>
+  <body class="mx-auto max-w-screen-sm flex flex-col gap-y-4">
+    <Navbar/>
+    <main class="flex flex-col gap-y-8">
+      <div>
+        <h1 class="text-2xl font-semibold">{post.data.title}</h1>
+        <FormattedDate date={post.data.published}>
+      </div>
+      <slot/>
+    </main>
+  </body>
+</html>

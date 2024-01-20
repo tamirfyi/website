@@ -1,9 +1,9 @@
 ---
 import FormattedDate from '../FormattedDate.astro'
-const {title, published, slug} = Astro.props
+const {title, description, published, slug} = Astro.props
 ---
 
 <div class="flex justify-between">
-  <a href={`/blog/${slug}`} class="hover:underline hover:text-blue-600">{title}</a>
+    <a href={`/blog/${slug}`} class="hover:underline hover:text-blue-600">{title}</a>
   <FormattedDate date={published}/>
 </div>

@@ -1,0 +1,14 @@
+---
+import Section from './Section.astro'
+import { getCollection } from 'astro:content';
+
+import BlogPostPreview from '../components/previews/BlogPostPreview.astro';
+const posts = (await getCollection('blog')).sort((a: any, b: any) => a.data.published.valueOf() - b.data.published.valueOf());
+
+---
+
+<Section title={`Blog`}>
+  {posts ? posts.map((post: any) => (
+    <BlogPostPreview title={post.data.title} description={post.data.description} slug={post.slug} published={post.data.published}/>
+  )) : <p class="text-gray-600">Coming soon</p>}
+</Section>
