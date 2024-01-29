@@ -19,5 +19,5 @@ const { Content } = await post.render();
 ---
 
 <Blog post={post}>
-  <Content/>
+  {post.data.draft ? <p class="text-gray-500">This post is still being written...</p> : <Content/>}
 </Blog>

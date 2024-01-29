@@ -11,18 +11,19 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
-    "@astrojs/mdx": "^2.0.5",
+    "@astrojs/mdx": "^2.1.0",
     "@astrojs/rss": "^4.0.2",
     "@astrojs/sitemap": "^3.0.4",
     "@astrojs/tailwind": "^5.1.0",
     "@mdx-js/mdx": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "astro": "^4.1.2",
-    "astro-icon": "^1.0.2",
+    "astro-icon": "^1.0.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.64"
+    "@iconify-json/mdi": "^1.1.64",
+    "prettier": "3.2.4"
   }
 }

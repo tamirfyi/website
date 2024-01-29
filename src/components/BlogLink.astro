@@ -1,0 +1,10 @@
+---
+interface BlogLink {
+  link: string,
+  title: string,
+}
+
+const {link, text} = Astro.props
+---
+
+<a class='underline hover:text-blue-500' href={`${link}`} target="_blank">{text}</a>

@@ -1,34 +1,17 @@
 ---
 const useImage = true;
-const imagePath = "/pf.jpeg";
-const fallbackName = "Tamir"
-
-interface SocialLink {
-  name: string,
-  href: string,
-  icon?: string,
-}
-const links: Array<SocialLink> = [
-  {
-    name: "Twitter",
-    href: "https://www.twitter.com/tamirfyi",
-  },
-  {
-    name: "GitHub",
-    href: "https://www.github.com/tamirfyi",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/whoistamir",
-  }
-];
+const imagePath = '/pf.jpeg';
+const fallbackName = 'Tamir';
 ---
 
 <div class="flex justify-between py-10">
-  {useImage ? <a href="/"><img src={imagePath} class="rounded-full w-16 h-16"/></a> : <p class="text-3xl font-bold">{fallbackName}</p> }
-  <ul class="flex gap-4 justify-center items-center">
-   {links && links.map((link: SocialLink) => (
-      <li class="hover:underline hover:text-blue-600"><a href={link.href}>{link.name}</a></li>
-   ))}
-  </ul>
+  {
+    useImage ? (
+      <a href="/">
+        <img src={imagePath} class="rounded-full w-16 h-16" />
+      </a>
+    ) : (
+      <p class="text-3xl font-bold">{fallbackName}</p>
+    )
+  }
 </div>
