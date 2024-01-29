@@ -14,7 +14,7 @@ const { title, description } = Astro.props;
     class="min-h-screen mx-auto flex-grow max-w-screen-md px-6 flex flex-col justify-between gap-y-4"
   >
     <Navbar />
-    <main class="flex-grow flex flex-col gap-y-8">
+    <main class="flex flex-col flex-grow overflow-y-auto gap-y-8">
       <slot />
     </main>
     <Footer />
