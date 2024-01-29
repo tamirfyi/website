@@ -18,8 +18,10 @@ const { post } = Astro.props;
     <Navbar />
     <main class="flex flex-col flex-grow overflow-y-auto gap-y-8">
       <div>
-        <h1 class="text-2xl font-semibold">{post.data.title}</h1>
-        <FormattedDate date={post.data.published} />
+        <div class="pb-4">
+          <h1 class="text-2xl font-semibold">{post.data.title}</h1>
+          <FormattedDate date={post.data.published} />
+        </div>
         <slot />
       </div>
       <Footer />
