@@ -1,12 +1,27 @@
 ---
 import Base from '../layouts/Base.astro';
-import About from '../components/About.astro';
-import Projects from '../components/Projects.astro';
+import Section from '../components/Section.astro';
 import Blogs from '../components/Blogs.astro';
 ---
 
 <Base>
-  <About />
-  <Projects />
+  <Section title={`Hi, I'm Tamir!`}>
+    <p>
+      {`I am a Software Engineer at`}
+      <span
+        class="underline hover:text-blue-600 transition ease hover:cursor-pointer"
+        ><a href="https://www.higherground.earth" target="_blank"
+          >{`HigherGround LLC`}</a
+        ></span
+      >{
+        `. I am part of a small team that maintains and develops new software for the SatPaq – the world's most compact, easy-to-use, and secure satellite communicator.`
+      }
+    </p>
+  </Section>
+
+  <Section title={`Projects`}>
+    <p class="text-gray-500">Coming soon!</p>
+  </Section>
+
   <Blogs />
 </Base>
